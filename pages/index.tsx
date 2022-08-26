@@ -48,7 +48,7 @@ const Home: NextPage<Props> = ({ plan_pricings }) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const API_URL_STRAPI: string = "http://localhost:1337/api/plan-pricings?populate=*"
 
   const res = await fetch(API_URL_STRAPI, {
